@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "bb091c24-19e5-4e6a-81c6-a88a1a45b048",
+		"name": "uCare app backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Chat",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Diagnosis",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "App",
+					"item": [
+						{
+							"name": "List latest diagnosis survey",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/v1/diagnosis/survey/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"diagnosis",
+										"survey",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Survey instance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/v1/diagnosis/survey/1/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"diagnosis",
+										"survey",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
