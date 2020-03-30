@@ -64,6 +64,36 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Create diagnosis response",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"survey\": 1,\n\t\"answers\": [\n\t\t{\n\t\t\t\"answer_text\": true,\n\t\t\t\"question\": 1\n\t\t},\n\t\t{\n\t\t\t\"answer_text\": false,\n\t\t\t\"question\": 2\n\t\t}\n\t]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/diagnosis/diagnosis/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"diagnosis",
+										"diagnosis",
+										""
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},
