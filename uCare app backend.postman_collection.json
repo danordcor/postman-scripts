@@ -111,7 +111,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"grant_type\": \"convert_token\",\n    \"client_id\": \"id_client\",\n    \"client_secret\": \"secret_client\",\n    \"backend\": \"facebook\",\n    \"token\": \"EAADqDZCjwZCSEBAFrtT6rdZCNazvUT9vrYhZA2em3apHxXnB5Fmy0VGpz2nTkISuWhgMm9o8aIxBJWMdC4ZCnjvVKMxPZA4XJDAwvWaR1JmnHoPe2fZAolOls6HdP2ZBmPBUNYecNafmfHcfn0mRY89PQK1IAFWTRvLeZBEUZBVX8iVWWywTQucnaz\"\n}"
+							"raw": "{\n    \"grant_type\": \"convert_token\",\n    \"client_id\": \"{{client_id}}\",\n    \"client_secret\": \"{{client_secret}}\",\n    \"backend\": \"facebook\",\n    \"token\": \"{{facebook_token}}\"\n}"
 						},
 						"description": ""
 					},
