@@ -1,107 +1,123 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "bb091c24-19e5-4e6a-81c6-a88a1a45b048",
 		"name": "uCare app backend",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "2677746b-b2b6-40f2-7d3a-6ec24f5d3edc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Chat",
-			"item": [],
-			"protocolProfileBehavior": {}
+			"description": "",
+			"item": []
 		},
 		{
 			"name": "Diagnosis",
+			"description": "",
 			"item": [
 				{
 					"name": "Admin",
+					"description": "",
 					"item": [],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
 					"name": "App",
+					"description": "",
 					"item": [
 						{
 							"name": "List latest diagnosis survey",
 							"request": {
+								"url": "{{host}}/api/v1/diagnosis/survey/",
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{host}}/api/v1/diagnosis/survey/",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"diagnosis",
-										"survey",
-										""
-									]
-								}
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
 							},
 							"response": []
 						},
 						{
 							"name": "Get Survey instance",
 							"request": {
+								"url": "{{host}}/api/v1/diagnosis/survey/1/",
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{host}}/api/v1/diagnosis/survey/1/",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"diagnosis",
-										"survey",
-										"1",
-										""
-									]
-								}
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
 							},
 							"response": []
 						},
 						{
 							"name": "Create diagnosis response",
 							"request": {
+								"url": "{{host}}/api/v1/diagnosis/diagnosis/",
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"survey\": 1,\n\t\"answers\": [\n\t\t{\n\t\t\t\"answer_text\": true,\n\t\t\t\"question\": 1\n\t\t},\n\t\t{\n\t\t\t\"answer_text\": false,\n\t\t\t\"question\": 2\n\t\t}\n\t]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									"raw": "{\n\t\"survey\": 1,\n\t\"answers\": [\n\t\t{\n\t\t\t\"answer_text\": true,\n\t\t\t\"question\": 1\n\t\t},\n\t\t{\n\t\t\t\"answer_text\": false,\n\t\t\t\"question\": 2\n\t\t}\n\t]\n}"
 								},
-								"url": {
-									"raw": "{{host}}/api/v1/diagnosis/diagnosis/",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"diagnosis",
-										"diagnosis",
-										""
-									]
-								}
+								"description": ""
 							},
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Simple Login",
+					"request": {
+						"url": "{{host}}/api/v1/auth/token/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"grant_type\": \"password\",\n    \"client_id\": \"id_client\",\n    \"client_secret\": \"secret_client\",\n    \"username\": \"daniel\",\n    \"password\": \"daniel1997\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Facebook Login",
+					"request": {
+						"url": "{{host}}/api/v1/auth/convert-token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"grant_type\": \"convert_token\",\n    \"client_id\": \"id_client\",\n    \"client_secret\": \"secret_client\",\n    \"backend\": \"facebook\",\n    \"token\": \"EAADqDZCjwZCSEBAFrtT6rdZCNazvUT9vrYhZA2em3apHxXnB5Fmy0VGpz2nTkISuWhgMm9o8aIxBJWMdC4ZCnjvVKMxPZA4XJDAwvWaR1JmnHoPe2fZAolOls6HdP2ZBmPBUNYecNafmfHcfn0mRY89PQK1IAFWTRvLeZBEUZBVX8iVWWywTQucnaz\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
